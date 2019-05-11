@@ -1,0 +1,90 @@
+
+
+<html>
+
+<head>
+  
+<title>jq click function</title>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+  
+  #circle1
+  {
+    height:50px;
+    width:50px;
+    background-color:green;
+    border-radius:50%;
+    margin:5px;
+    position:relative;
+    float:left;
+  }
+  
+  #circle2
+  {
+    height:50px;
+    width:50px;
+    background-color:green;
+    border-radius:50%;
+    margin:5px;
+    position:relative;
+    float:left;
+  }
+  
+  .red
+  {
+    height:50px;
+    width:50px;
+    background-color:red;
+    margin:5px;
+    position:relative;
+    float:left;
+  }
+  
+</style>
+
+</head>
+
+<body>
+
+<h3>hover over me</h3>
+
+<p id="circle1"></p>
+
+<p id="circle2"></p>
+<p id="square1" class="red"></p>
+<p id="square2" class="red"></p>
+
+<script>
+
+  $("h3").hover(function()
+    {
+      $(this).html("feels so good")
+    },
+  function()
+    {
+      $(this).html("hover over me")
+    }
+  );
+  
+  $("#circle1").click(function()
+  {
+    $("#circle1").css("background-color","green")
+    alert($("#circle1").css("background-color"))
+    alert($("body").css("width"))
+  });
+  
+  $("p").click(function()
+  {
+    $(this).css("display","none")
+    alert("you clicked on " + $(this).attr("id"))
+  })
+  
+
+  
+</script>
+
+</body>
+
+</html>

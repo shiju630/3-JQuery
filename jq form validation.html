@@ -1,0 +1,92 @@
+
+
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+  
+  form
+  {
+
+    font-family: Trebuchet MS;
+    width:500px;
+    margin:0px auto;
+    background-color: orange;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5%;
+
+  }
+  
+  label
+  {
+    width:150px;
+    float: left;
+  }
+  
+  button
+  {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10%;
+  }
+  
+  input
+  {
+    border-radius: 5%;
+  }
+  
+</style>
+
+
+</head>
+
+
+  
+    <body>
+        
+      <form>
+        
+        <p><label>Email:</label><input type="text" id="email" placeholder="enter your email"></p>
+        <p><label>Phone:</label><input type="text" id="phone" placeholder="enter your phone number"></p>
+        <p><label>Password:</label><input type="password" id="password" placeholder="enter your password"></p>
+        <p><label>Confirm Password:</label><input type="password" id="passwordConfirm" placeholder="enter your password again"></p>
+        <button id="submit" value="Submit">Submit</button>
+        
+      </form>
+        
+        
+        <script type="text/javascript">
+            
+            function isEmail(email) {
+              var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+              return regex.test(email);
+            }
+            
+            $("#submit").click(function()
+            {
+              if(!isEmail($("#email").val()))
+              alert("Enter valid email")
+              
+              if(!$.isNumeric($("#phone").val()))
+              alert("Enter valid phone Number")
+              
+              if($("#password").val()!=$("#passwordConfirm").val())
+              alert("Password does not match")
+              
+            })
+            
+        </script>
+        
+    </body>
+
+</html>

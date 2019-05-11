@@ -1,0 +1,39 @@
+
+<html>
+
+<head>
+  
+<title>jquery ui drag resize</title>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+</head>
+
+    <body>
+
+       
+       <div id="box1" style="width:300px;height:300px;background-color:pink"></div>
+       
+       <div id="box2" style="width:100px;height:100px;background-color:red"></div>
+  
+  
+        
+      <script type="text/javascript">
+              
+      $("#box2").draggable()
+      
+      $("#box1").droppable({
+            
+          drop: function( event, ui ) {alert("dont do it")}
+              
+      });
+ 
+        
+      </script>
+        
+    </body>
+
+</html>

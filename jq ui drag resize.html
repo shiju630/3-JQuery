@@ -1,0 +1,57 @@
+
+<html>
+
+<head>
+  
+<title>jquery ui drag resize</title>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+</head>
+
+    <body>
+      
+       <div id="drag">Drag me!</div>
+       
+       <div id="boxDrag" style="width:100px;height:100px;background-color:pink">
+         
+         <span>get me out!!</span>
+         
+       </div>
+       
+  <div id="box1" style="width:100px;height:100px;background-color:red">
+         
+         <span>Box 1</span>
+         
+  </div>
+  
+  <div id="box2" style="width:100px;height:100px;background-color:blue">
+         
+         <span>Box 2</span>
+         
+  </div>
+        
+        <script type="text/javascript">
+            
+           $("#drag").draggable({axis:"y"});
+           $("span").draggable({containment:"parent"})
+           
+           $("#boxDrag").resizable({
+                grid:50,
+                resize:function(event, ui){alert("stop it")}
+                
+           });
+           
+      
+           $("#box1").resizable({alsoResize:"#box2"});
+           $("#box2").resizable();
+ 
+        
+        </script>
+        
+    </body>
+
+</html>

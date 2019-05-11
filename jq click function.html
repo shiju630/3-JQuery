@@ -1,0 +1,60 @@
+
+
+<html>
+
+<head>
+  
+<title>jq click function</title>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+  
+  #circle
+  {
+    height:50px;
+    width:50px;
+    background-color:green;
+    border-radius:50%;
+    margin:5px;
+    position:relative;
+    float:left;
+  }
+  
+  .red
+  {
+    height:50px;
+    width:50px;
+    background-color:red;
+    margin:5px;
+    position:relative;
+    float:left;
+  }
+  
+</style>
+
+</head>
+
+<body>
+
+
+<p id="circle"></p>
+<p id="red1" class="red"></p>
+<p id="red2" class="red"></p>
+
+
+<script>
+  
+  $("#circle").click(function()
+  {
+    alert("circle clicked")
+  })
+  
+  $(".red").click(function()
+  {
+    alert("red box clicked")
+  })
+  
+</script>
+
+</html>
